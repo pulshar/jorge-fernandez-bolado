@@ -1,0 +1,8 @@
+{
+  "name": "Jorge Fernández Bolado — Fotografía",
+  "description": "Portfolio fotográfico de Jorge Fernández Bolado (Santander, 1950). Colecciones de autor, arquitectura y arte con navegación fluida y vista Overview.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
