@@ -1,6 +1,5 @@
 import React from 'react';
 import { Collection } from '../data/portfolioData';
-import { Check } from 'lucide-react';
 
 interface OverviewViewProps {
   collection: Collection;

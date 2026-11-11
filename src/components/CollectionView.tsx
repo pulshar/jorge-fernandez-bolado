@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { Collection, PhotoItem } from '../data/portfolioData';
 import { OverviewView } from './OverviewView';
-import { Grid, X } from 'lucide-react';
+import { Grid, X, ArrowLeft } from 'lucide-react';
 
 interface CollectionViewProps {
   collections: Collection[];
@@ -160,8 +160,17 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
       {/* Persistent Bottom Footer: Overview button switches to "Cerrar" when Overview is active */}
       <footer className="fixed bottom-0 left-0 right-0 z-30 bg-[#fcfcfc]/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm border-t border-black/[0.06] dark:border-white/[0.08] px-4 sm:px-6 py-3 transition-colors">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          {/* Left: Collection Name & Status */}
-          <div className="flex items-baseline gap-2 sm:gap-3 min-w-0">
+          {/* Left: Collection Name & Status with Back Link */}
+          <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+            <Link
+              to="/colecciones"
+              className="group inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-neutral-500 hover:text-neutral-950 transition-colors cursor-pointer shrink-0 -ml-1"
+              title="Volver a todas las colecciones"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-0.5" />
+              <span className="hidden sm:inline">Colecciones</span>
+            </Link>
+            <span className="text-neutral-300 dark:text-neutral-700 hidden sm:inline">/</span>
             <span className="text-xs sm:text-sm font-semibold tracking-wide text-neutral-900 dark:text-neutral-100 truncate">
               {collection.name}
             </span>
@@ -212,12 +221,12 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
               {isOverview ? (
                 <>
                   <X className="w-3.5 h-3.5" />
-                  <span>Cerrar</span>
+                  <span className='hidden md:block'>Cerrar</span>
                 </>
               ) : (
                 <>
                   <Grid className="w-3.5 h-3.5" />
-                  <span>Overview</span>
+                  <span className='hidden md:block'>Overview</span>
                 </>
               )}
             </button>
