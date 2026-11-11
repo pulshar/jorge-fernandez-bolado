@@ -100,7 +100,7 @@ export const SelectionView: React.FC<SelectionViewProps> = ({ items }) => {
             src={currentPhoto.src}
             alt={currentPhoto.title || currentPhoto.collectionName}
             referrerPolicy="no-referrer"
-            className="max-h-[calc(100dvh-8.5rem)] sm:max-h-[75vh] w-auto max-w-[92vw] sm:max-w-[88vw] object-contain shadow-sm photo-transition"
+            className="w-auto h-auto max-h-[calc(100dvh-8.5rem)] sm:max-h-[75vh] max-w-[92vw] sm:max-w-[88vw] object-contain shadow-sm photo-transition"
           />
         </div>
       </div>

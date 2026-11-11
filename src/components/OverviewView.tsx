@@ -27,26 +27,22 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
         </span>
       </div>
 
-      {/* Grid of Thumbnails of THIS Collection */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      {/* Grid of Thumbnails of THIS Collection — Respecting Original Aspect Ratios (Uncropped) */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 sm:gap-8 [column-fill:_balance]">
         {collection.items.map((item, idx) => {
-          const isCurrentlyActive = idx === activeItemIndex;
-
           return (
             <div
               key={item.id}
               onClick={() => onSelectPhoto(idx)}
-              className="group cursor-pointer flex flex-col focus-visible:outline-none"
+              className="break-inside-avoid mb-6 sm:mb-8 group cursor-pointer flex flex-col focus-visible:outline-none"
             >
-              <div
-                className={`relative aspect-[4/3] w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden rounded-xs border transition-all duration-200 group-hover:shadow-md border-black/[0.08] dark:border-white/[0.08] group-hover:border-neutral-400 dark:group-hover:border-neutral-600'}`}
-              >
+              <div className="relative w-full overflow-hidden rounded-xs border border-black/[0.08] dark:border-white/[0.08] group-hover:border-neutral-400 dark:group-hover:border-neutral-600 transition-all duration-200 group-hover:shadow-md bg-neutral-100 dark:bg-neutral-900">
                 <img
                   src={item.src}
                   alt={item.title}
                   loading="lazy"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                  className="w-full h-auto block object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02]"
                 />
 
                 <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-3 flex flex-col justify-end text-white">

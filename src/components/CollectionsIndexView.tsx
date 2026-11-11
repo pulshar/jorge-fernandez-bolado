@@ -35,7 +35,7 @@ export const CollectionsIndexView: React.FC<CollectionsIndexViewProps> = ({
               className="group cursor-pointer flex flex-col focus-visible:outline-none"
             >
               {/* Cover Preview Image */}
-              <div className="relative aspect-[4/3] w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden rounded-xs border border-black/[0.08] dark:border-white/[0.08] group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-all duration-300">
+              <div className="relative aspect-[16/9] w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden rounded-xs border border-black/[0.08] dark:border-white/[0.08] group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-all duration-300">
                 <img
                   src={coverSrc}
                   alt={col.name}
