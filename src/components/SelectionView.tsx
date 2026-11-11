@@ -78,7 +78,7 @@ export const SelectionView: React.FC<SelectionViewProps> = ({ items }) => {
       onTouchEnd={handleTouchEnd}
     >
       {/* Central Viewport Stage */}
-      <div className="relative flex-1 w-full max-w-7xl mx-auto px-2 sm:px-6 py-2 sm:py-6 flex items-center justify-center">
+      <div className="relative flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-16 flex items-start justify-center">
         {/* Invisible Left Click Zone */}
         <div
           onClick={handlePrev}
@@ -119,11 +119,11 @@ export const SelectionView: React.FC<SelectionViewProps> = ({ items }) => {
                 <span className="text-xs text-neutral-600 dark:text-neutral-300 truncate">
                   {currentPhoto.title}
                 </span>
+                <span className="hidden md:inline text-xs font-mono text-neutral-400 shrink-0">
+                  {' '} ({currentPhoto.year})
+                </span>
               </div>
             )}
-            <span className="hidden md:inline text-xs font-mono text-neutral-400 shrink-0">
-              ({currentPhoto.year})
-            </span>
           </div>
 
           {/* Right: Counter with unique URL representation */}

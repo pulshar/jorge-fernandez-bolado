@@ -8,6 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-sans {
+  font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 /* Custom scrollbar for minimalist portfolio */
 ::-webkit-scrollbar {
   width: 5px;

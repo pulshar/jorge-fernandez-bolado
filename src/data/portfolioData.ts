@@ -24,8 +24,8 @@ export interface Collection {
 export const COLLECTIONS: Collection[] = [
   {
     id: 'arquitectura-patrimonio',
-    name: 'Arquitectura & Patrimonio',
-    tagline: 'Defensa del patrimonio, Paseo Pereda y el frente marítimo de Santander',
+    name: 'Arquitectura y patrimonio',
+    tagline: 'Defensa del patrimonio, Paseo Pereda y el frente marítimo de Santander.',
     yearSpan: '1979 — Actualidad',
     venueOrClient: 'Colegio de Arquitectos / Autoridad Portuaria de Santander',
     curatorNote: 'Desde su primer encargo profesional en 1979 con las obras de Fernando Obregón Ansorena, hasta la histórica serie sobre el Paseo Pereda y Castelar (1980) y el libro "Santander, el Puerto y su Historia" (1985–2017). Rigor compositivo, perspectiva y la sobria luz atlántica del Cantábrico.',
@@ -34,7 +34,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'arq-01',
         collectionId: 'arquitectura-patrimonio',
-        collectionName: 'Arquitectura & Patrimonio',
+        collectionName: 'Arquitectura y patrimonio',
         title: 'Paseo Pereda y Bahía de Santander',
         year: '1980',
         location: 'Santander, Cantabria',
@@ -45,7 +45,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'arq-02',
         collectionId: 'arquitectura-patrimonio',
-        collectionName: 'Arquitectura & Patrimonio',
+        collectionName: 'Arquitectura y patrimonio',
         title: 'Palacete del Embarcadero y Muelle',
         year: '1985',
         location: 'Dársena de Santander',
@@ -56,7 +56,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'arq-03',
         collectionId: 'arquitectura-patrimonio',
-        collectionName: 'Arquitectura & Patrimonio',
+        collectionName: 'Arquitectura y patrimonio',
         title: 'Fachada y Miradores de Santander',
         year: '1979',
         location: 'Santander',
@@ -69,7 +69,7 @@ export const COLLECTIONS: Collection[] = [
   {
     id: 'santander-jazz-83',
     name: "Santander Jazz '83",
-    tagline: 'Atmósfera nocturna, humo y claroscuros del jazz en vivo',
+    tagline: 'Atmósfera nocturna, humo y claroscuros del jazz en vivo.',
     yearSpan: '1983 / Exp. 2006',
     venueOrClient: 'Bar Rvbicón (Calle del Sol, Santander)',
     curatorNote: 'Serie analógica en 35mm tomada durante las sesiones de jazz en Santander en 1983. Rescatada y expuesta en 2006 en el legendario bar Rvbicón. Grano denso, luz escénica directa y gestos suspendidos en el compás musical.',
@@ -113,7 +113,7 @@ export const COLLECTIONS: Collection[] = [
   {
     id: 'jardines-sin-dueno',
     name: 'Jardines sin dueño',
-    tagline: 'Botánica indómita, sombras y texturas salvajes de Cantabria',
+    tagline: 'Botánica indómita, sombras y texturas salvajes de Cantabria.',
     yearSpan: '2005',
     venueOrClient: 'Galería Trazos Tres (Santander)',
     curatorNote: 'Exposición individual realizada en 2005 en la Galería Trazos Tres. Un ensayo poético sobre rincones vegetales que escapan al control humano: muros de piedra cubiertos de musgo húmedo, helechos gigantes y luz filtrada.',
@@ -156,8 +156,8 @@ export const COLLECTIONS: Collection[] = [
   },
   {
     id: 'arte-catalogos',
-    name: 'Arte & Catálogos',
-    tagline: 'Sol LeWitt, MAS Santander, Fundación Botín y artistas contemporáneos',
+    name: 'Arte y catálogos',
+    tagline: 'Sol LeWitt, MAS Santander, Fundación Botín y artistas contemporáneos.',
     yearSpan: '1981 — Actualidad',
     venueOrClient: 'Fundación Botín / MAS Bellas Artes / Sala Robayera',
     curatorNote: 'Documentación rigurosa de obras de arte, exposiciones e instalaciones para catálogos de referencia: "Sol LeWitt 17 wall drawings 1970-2015" (Fundación Botín), catálogos Sedano (1981), Joaquín Martínez Cano (1986), "La Idea de Arte" (2014) y "Siempre nos quedará la pintura" (2011).',
@@ -166,7 +166,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'art-01',
         collectionId: 'arte-catalogos',
-        collectionName: 'Arte & Catálogos',
+        collectionName: 'Arte y catálogos',
         title: 'Sol LeWitt: 17 Wall Drawings',
         year: '2015',
         location: 'Santander',
@@ -177,7 +177,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'art-02',
         collectionId: 'arte-catalogos',
-        collectionName: 'Arte & Catálogos',
+        collectionName: 'Arte y catálogos',
         title: 'Escultura moderna en el MAS',
         year: '2014',
         location: 'MAS Santander',
@@ -188,7 +188,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'art-03',
         collectionId: 'arte-catalogos',
-        collectionName: 'Arte & Catálogos',
+        collectionName: 'Arte y catálogos',
         title: 'Catálogo Joaquín Martínez Cano',
         year: '1986',
         location: 'Fundación Botín, Santander',
@@ -200,8 +200,8 @@ export const COLLECTIONS: Collection[] = [
   },
   {
     id: 'fabrica-suenos',
-    name: 'Fábrica de Sueños',
-    tagline: 'Reflejos cromáticos, abstracción en el agua y juegos de luz',
+    name: 'Fábrica de sueños',
+    tagline: 'Reflejos cromáticos, abstracción en el agua y juegos de luz.',
     yearSpan: '2008',
     venueOrClient: 'Galería DelSol St. / Centro Cultural La Vidriera',
     curatorNote: 'Conjunto surgido de la exposición "Sueños Fugaces" en La Vidriera (Camargo, 2008) y la publicación del libro "Fábrica de sueños" junto con la serie de 8 obras en color en la Galería DelSol St. de Santander. Geometría líquida y resonancia tonal.',
@@ -210,7 +210,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'sue-01',
         collectionId: 'fabrica-suenos',
-        collectionName: 'Fábrica de Sueños',
+        collectionName: 'Fábrica de sueños',
         title: 'Reflejo arquitectónico en agua calma',
         year: '2008',
         location: 'Galería DelSol St., Santander',
@@ -221,7 +221,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'sue-02',
         collectionId: 'fabrica-suenos',
-        collectionName: 'Fábrica de Sueños',
+        collectionName: 'Fábrica de sueños',
         title: 'Sueños Fugaces: Vidrieras y geometrías de luz',
         year: '2008',
         location: 'Camargo, Cantabria',
@@ -232,7 +232,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'sue-03',
         collectionId: 'fabrica-suenos',
-        collectionName: 'Fábrica de Sueños',
+        collectionName: 'Fábrica de sueños',
         title: 'Oleaje dorado en la bahía',
         year: '2008',
         location: 'Santander',
@@ -244,8 +244,8 @@ export const COLLECTIONS: Collection[] = [
   },
   {
     id: 'viajes-mirada-casual',
-    name: 'Viajes & Mirada Casual',
-    tagline: '"Con la libertad e improvisación del turista aficionado: vemos otra cosa"',
+    name: 'Viajes, mirada casual',
+    tagline: '"Con la libertad e improvisación del turista aficionado: vemos otra cosa".',
     yearSpan: '1968 — Actualidad',
     venueOrClient: 'Exposiciones individuales y archivo personal',
     curatorNote: 'Como Jorge mismo reflexiona: "Fotografía con la libertad e improvisación del turista aficionado, algunas veces atina y la mirada se transforma: vemos otra cosa". Encuentros fortuitos, la luz sesgada del atardecer y la silenciosa condición humana.',
@@ -254,7 +254,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'via-01',
         collectionId: 'viajes-mirada-casual',
-        collectionName: 'Viajes & Mirada Casual',
+        collectionName: 'Viajes, mirada casual',
         title: 'La mujer en el umbral y sombras de piedra',
         year: '1992',
         location: 'Ruta europea / Archivo de viaje',
@@ -265,7 +265,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'via-02',
         collectionId: 'viajes-mirada-casual',
-        collectionName: 'Viajes & Mirada Casual',
+        collectionName: 'Viajes, mirada casual',
         title: 'Bicicleta en arco de piedra',
         year: '1995',
         location: 'Plaza marinera',
@@ -276,7 +276,7 @@ export const COLLECTIONS: Collection[] = [
       {
         id: 'via-03',
         collectionId: 'viajes-mirada-casual',
-        collectionName: 'Viajes & Mirada Casual',
+        collectionName: 'Viajes, mirada casual',
         title: 'El viajero frente a los acantilados',
         year: '2001',
         location: 'Costa cantábrica',

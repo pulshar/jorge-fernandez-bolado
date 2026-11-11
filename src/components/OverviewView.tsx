@@ -17,14 +17,15 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-12 animate-in fade-in duration-200">
       {/* Top Header inside Overview */}
-      <div className="pb-5 mb-6 border-b border-black/[0.08] dark:border-white/[0.08]">
-        <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
-          Overview · {collection.items.length} Fotografías
+      <div className="mb-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <div>
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mt-1">
+            {collection.name}
+          </h2>
+        </div>
+        <span className="text-xs font-mono text-neutral-500 dark:text-neutral-400">
+          Colección de {collection.items.length} fotografías
         </span>
-        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mt-1">
-          {collection.name}
-        </h2>
-
       </div>
 
       {/* Grid of Thumbnails of THIS Collection */}
@@ -39,10 +40,7 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
               className="group cursor-pointer flex flex-col focus-visible:outline-none"
             >
               <div
-                className={`relative aspect-[4/3] w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden rounded-xs border transition-all duration-200 group-hover:shadow-md ${isCurrentlyActive
-                  ? 'border-neutral-950 dark:border-white ring-2 ring-neutral-950/20 dark:ring-white/20'
-                  : 'border-black/[0.08] dark:border-white/[0.08] group-hover:border-neutral-400 dark:group-hover:border-neutral-600'
-                  }`}
+                className={`relative aspect-[4/3] w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden rounded-xs border transition-all duration-200 group-hover:shadow-md border-black/[0.08] dark:border-white/[0.08] group-hover:border-neutral-400 dark:group-hover:border-neutral-600'}`}
               >
                 <img
                   src={item.src}
@@ -52,15 +50,8 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
                   className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                 />
 
-                {isCurrentlyActive && (
-                  <div className="absolute top-2 right-2 px-1.5 py-0.5 text-[9px] font-mono uppercase tracking-wider bg-neutral-950 text-white dark:bg-white dark:text-neutral-950 shadow-xs flex items-center gap-1">
-                    <Check className="w-2.5 h-2.5" />
-                    <span>Activa</span>
-                  </div>
-                )}
-
                 <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-3 flex flex-col justify-end text-white">
-                  <span className="text-[10px] font-mono tracking-widest uppercase opacity-80">
+                  <span className="text-[11px] font-mono tracking-widest uppercase opacity-80">
                     Abrir en visor →
                   </span>
                 </div>

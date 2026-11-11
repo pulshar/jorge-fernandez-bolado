@@ -129,7 +129,7 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
         />
       ) : (
         /* Slideshow Mode (Full photo with left/right click navigation, no circular buttons) */
-        <div className="relative flex-1 w-full max-w-7xl mx-auto px-2 sm:px-6 py-2 sm:py-6 flex items-center justify-center min-h-[70vh]">
+        <div className="relative flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-16 flex items-start justify-center min-h-[70vh]">
           {/* Invisible Left Click Zone */}
           <div
             onClick={handlePrev}
@@ -173,11 +173,11 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
                     <span className="text-xs text-neutral-600 dark:text-neutral-300 truncate">
                       {currentItem.title}
                     </span>
+                    <span className="hidden md:inline text-xs font-mono text-neutral-400 shrink-0">
+                      {' '} ({currentItem.year})
+                    </span>
                   </>
                 )}
-                <span className="hidden md:inline text-xs font-mono text-neutral-400 shrink-0">
-                  ({currentItem.year})
-                </span>
               </div>
             ) : (
               <div className='hidden md:inline'>

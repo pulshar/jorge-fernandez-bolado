@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ isDark, onToggleTheme }) => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-40 bg-[#fcfcfc]/92 dark:bg-[#0c0c0d]/92 backdrop-blur-md border-b border-black/[0.06] dark:border-white/[0.08] transition-colors duration-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
+        <div className="relative mx-auto px-4 sm:px-8 h-16 flex items-center justify-between gap-6">
           {/* Zone 1: Wordmark (Link to Selección / Home) */}
           <div className="flex items-center gap-3 shrink-0">
             <Link
@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ isDark, onToggleTheme }) => {
           </div>
 
           {/* Zone 2: Navigation Links with Unique Routes (Desktop) */}
-          <nav className="hidden md:flex items-center gap-7 text-xs tracking-wide font-medium text-neutral-600 dark:text-neutral-300">
+          <nav className="hidden md:flex md:pl-86 lg:pl-0 absolute left-1/2 -translate-x-1/2 items-center gap-7 text-xs tracking-wide font-medium text-neutral-600 dark:text-neutral-300">
             {/* 1. Selección */}
             <Link
               to="/seleccion"
@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ isDark, onToggleTheme }) => {
             >
               Selección
               {isSelection && (
-                <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-neutral-950 dark:bg-white animate-in fade-in duration-200" />
+                <span className="absolute bottom-1 left-0 right-0 h-[1.5px] bg-neutral-950 dark:bg-white animate-in fade-in duration-200" />
               )}
             </Link>
 
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ isDark, onToggleTheme }) => {
             >
               Colecciones
               {isCollections && (
-                <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-neutral-950 dark:bg-white animate-in fade-in duration-200" />
+                <span className="absolute bottom-1 left-0 right-0 h-[1.5px] bg-neutral-950 dark:bg-white animate-in fade-in duration-200" />
               )}
             </Link>
 
