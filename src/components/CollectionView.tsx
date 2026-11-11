@@ -111,7 +111,10 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
 
   return (
     <div
-      className="relative w-full min-h-[calc(100vh-4rem)] mt-16 flex flex-col justify-between select-none overflow-hidden touch-pan-y pb-16 page-enter"
+      className={`relative w-full mt-16 select-none touch-pan-y page-enter ${isOverview
+        ? 'min-h-[calc(100vh-4rem)] min-h-[calc(100dvh-4rem)] pb-20'
+        : 'h-[calc(100vh-4rem)] h-[calc(100dvh-4rem)] max-h-[calc(100dvh-4rem)] flex flex-col justify-between overflow-hidden pb-14'
+        }`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -129,7 +132,7 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
         />
       ) : (
         /* Slideshow Mode (Full photo with left/right click navigation, no circular buttons) */
-        <div className="relative flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-16 flex items-start justify-center min-h-[70vh]">
+        <div className="relative flex-1 min-h-0 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-16 flex items-center justify-center overflow-hidden">
           {/* Invisible Left Click Zone */}
           <div
             onClick={handlePrev}
@@ -145,20 +148,20 @@ export const CollectionView: React.FC<CollectionViewProps> = ({ collections }) =
           />
 
           {/* Photographic Canvas with subtle dissolve */}
-          <div className="relative z-10 max-h-[74vh] sm:max-h-[78vh] flex items-center justify-center pointer-events-none">
+          <div className="relative z-10 w-full h-full max-h-full flex items-start justify-center pointer-events-none">
             <img
               key={currentItem.id}
               src={currentItem.src}
               alt={currentItem.title}
               referrerPolicy="no-referrer"
-              className="max-h-[70vh] sm:max-h-[75vh] w-auto max-w-[94vw] sm:max-w-[88vw] object-contain shadow-sm photo-transition"
+              className="max-h-[calc(100dvh-8.5rem)] sm:max-h-[75vh] w-auto max-w-[92vw] sm:max-w-[88vw] object-contain shadow-sm photo-transition"
             />
           </div>
         </div>
       )}
 
       {/* Persistent Bottom Footer: Overview button switches to "Cerrar" when Overview is active */}
-      <footer className="fixed bottom-0 left-0 right-0 z-30 bg-[#fcfcfc]/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm border-t border-black/[0.06] dark:border-white/[0.08] px-4 sm:px-6 py-3 transition-colors">
+      <footer className="fixed bottom-0 left-0 right-0 z-30 bg-[#fcfcfc]/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm border-t border-black/[0.06] dark:border-white/[0.08] px-4 sm:px-6 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] transition-colors">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Left: Collection Name & Status with Back Link */}
           <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">

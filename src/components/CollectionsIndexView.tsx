@@ -11,7 +11,7 @@ export const CollectionsIndexView: React.FC<CollectionsIndexViewProps> = ({
   collections,
 }) => {
   return (
-    <div className="min-h-[calc(100vh-4rem)] mt-16 px-4 sm:px-6 py-4 sm:py-16 max-w-7xl mx-auto animate-in fade-in duration-200">
+    <div className="min-h-[calc(100vh-4rem)] mt-16 px-4 sm:px-6 py-4 pb-16 sm:py-16 max-w-7xl mx-auto animate-in fade-in duration-200">
       {/* Editorial Header */}
       {/* <div className="pb-5 mb-6 border-b border-black/[0.08] dark:border-white/[0.08]">
         <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500">

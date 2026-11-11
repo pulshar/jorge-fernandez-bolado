@@ -73,12 +73,12 @@ export const SelectionView: React.FC<SelectionViewProps> = ({ items }) => {
 
   return (
     <div
-      className="relative w-full h-[calc(100vh-4rem)] mt-16 flex flex-col justify-between select-none overflow-hidden touch-pan-y page-enter"
+      className="relative w-full h-[calc(100vh-4rem)] h-[calc(100dvh-4rem)] max-h-[calc(100dvh-4rem)] mt-16 flex flex-col justify-between select-none overflow-hidden touch-pan-y page-enter"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Central Viewport Stage */}
-      <div className="relative flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-16 flex items-start justify-center">
+      <div className="relative flex-1 min-h-0 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-16 flex items-center justify-center overflow-hidden">
         {/* Invisible Left Click Zone */}
         <div
           onClick={handlePrev}
@@ -94,19 +94,19 @@ export const SelectionView: React.FC<SelectionViewProps> = ({ items }) => {
         />
 
         {/* Photographic Canvas with subtle dissolve */}
-        <div className="relative z-10 max-h-[74vh] sm:max-h-[78vh] flex items-center justify-center pointer-events-none">
+        <div className="relative z-10 w-full h-full max-h-full flex items-start justify-center pointer-events-none">
           <img
             key={currentPhoto.id}
             src={currentPhoto.src}
             alt={currentPhoto.title || currentPhoto.collectionName}
             referrerPolicy="no-referrer"
-            className="max-h-[70vh] sm:max-h-[75vh] w-auto max-w-[94vw] sm:max-w-[88vw] object-contain shadow-sm photo-transition"
+            className="max-h-[calc(100dvh-8.5rem)] sm:max-h-[75vh] w-auto max-w-[92vw] sm:max-w-[88vw] object-contain shadow-sm photo-transition"
           />
         </div>
       </div>
 
       {/* Bottom Editorial Caption & Counter (Exact format requested) */}
-      <footer className="relative z-30 w-full bg-[#fcfcfc]/95 dark:bg-[#0c0c0d]/95 border-t border-black/[0.06] dark:border-white/[0.08] px-4 sm:px-6 py-3 transition-colors">
+      <footer className="relative z-30 w-full bg-[#fcfcfc]/95 dark:bg-[#0c0c0d]/95 border-t border-black/[0.06] dark:border-white/[0.08] px-4 sm:px-6 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] transition-colors shrink-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Left: Collection Name & Photo Title */}
           <div className="flex items-baseline gap-2 sm:gap-3 min-w-0">

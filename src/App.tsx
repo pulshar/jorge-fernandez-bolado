@@ -41,7 +41,7 @@ export default function App() {
   const isBiographyOpen = location.pathname === '/biografia';
 
   return (
-    <div className="min-h-screen bg-[#fcfcfc] dark:bg-[#0c0c0d] text-[#141416] dark:text-[#f2f2f3] transition-colors duration-200 flex flex-col justify-between">
+    <div className="min-h-screen min-h-[100dvh] bg-[#fcfcfc] dark:bg-[#0c0c0d] text-[#141416] dark:text-[#f2f2f3] transition-colors duration-200 flex flex-col justify-between">
       {/* Fixed Navigation Header with React Router integration */}
       <Header
         isDark={isDark}
